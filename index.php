@@ -13,7 +13,13 @@ if (str_contains($message, '/prepaid')) {
     $message = "Your command /credit";
 }
 elseif (str_contains($message, '/giftCard')) {
-    $message = 'Enter in this format:\n brand e.g "Visa Card" (required)\nNumber e.g "123456789" (required)\npin1 e.g "12434" (optional)\npin2 e.g "12434" (optional)\nvalue e.g "2000" (required)\npurchase rate e.g "0.7" (required) ';
+    $message = 'Enter in this format:
+    brand e.g "Visa Card" (required)
+    Number e.g "123456789" (required)
+    pin1 e.g "12434" (optional)
+    pin2 e.g "12434" (optional)
+    value e.g "2000" (required)
+    purchase rate e.g "0.7" (required)';
 }
 else {
     $message = "Please enter valid command!!!";
