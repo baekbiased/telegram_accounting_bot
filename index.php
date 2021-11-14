@@ -5,10 +5,21 @@ $data = json_decode($input);
 
 $chat_id = $data->message->chat->id;
 $message = $data->message->text;
-$message = $message . "Webhook Reply";
 
 $token = '2119894887:AAG8Eh8GhUf7CkKogN_tWn4VH6GsJ9XIvSM';
 $url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$message";
+//$message = $message . " Webhook Reply";
+
+if (str_contains($message, '/credit')) {
+    $message = "Your command /credit";
+}
+elseif (str_contains($message, '/debit')) {
+    $message = "Your command /debit";
+}
+else {
+    $message = "Please enter valid command!!!";
+
+}
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
