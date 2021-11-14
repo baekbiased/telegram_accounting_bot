@@ -9,11 +9,11 @@ $message = $data->message->text;
 $token = '2146837900:AAHUtkbxso65QAULLvK-ciCT01PPCv-6Lvg';
 //$message = $message . " Webhook Reply";
 
-if (str_contains($message, '/credit')) {
+if (str_contains($message, '/prepaid')) {
     $message = "Your command /credit";
 }
-elseif (str_contains($message, '/debit')) {
-    $message = "Your command /debit";
+elseif (str_contains($message, '/giftCard')) {
+    $message = 'Enter in this format:\n brand e.g "Visa Card" (required)\nNumber e.g "123456789" (required)\npin1 e.g "12434" (optional)\npin2 e.g "12434" (optional)\nvalue e.g "2000" (required)\npurchase rate e.g "0.7" (required) ';
 }
 else {
     $message = "Please enter valid command!!!";
