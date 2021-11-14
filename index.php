@@ -6,7 +6,7 @@ $data = json_decode($input);
 $chat_id = $data->message->chat->id;
 $message = $data->message->text;
 
-$token = '2119894887:AAG8Eh8GhUf7CkKogN_tWn4VH6GsJ9XIvSM';
+$token = '2146837900:AAHUtkbxso65QAULLvK-ciCT01PPCv-6Lvg';
 //$message = $message . " Webhook Reply";
 
 if (str_contains($message, '/credit')) {
